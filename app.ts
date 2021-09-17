@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     //card options
-    const cardArray = [
+    let cardArray: any[] = [
       {
         name: 'fries',
         img: 'images/fries.png'
@@ -55,13 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#result')
-    let cardsChosen = []
-    let cardsChosenId = []
-    let cardsWon = []
+    let cardsChosen: any[] = []
+    let cardsChosenId: any[] = []
+    let cardsWon: any[string] = []
   
     //create your board
     function createBoard() {
-      for (let i = 0; i < cardArray.length; i++) {
+      for (let i:any = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
         card.setAttribute('src', 'images/blank.png')
         card.setAttribute('data-id', i)
